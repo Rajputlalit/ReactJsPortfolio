@@ -1,0 +1,100 @@
+.cm-backdrop{
+  position: fixed;
+  inset: 0;
+  background: rgba(16, 10, 30, 0.45);
+  backdrop-filter: blur(4px);
+  display: grid;
+  place-items: center;
+  z-index: 1200;
+}
+
+.cm-dialog{
+  width: min(720px, 92vw);
+  background: #fff;
+  border: 1px solid #ece7ff;
+  border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(12,18,60,0.25);
+  padding: 1.4rem;
+  position: relative;
+}
+
+.cm-close{
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  color: #333;
+  cursor: pointer;
+}
+
+.cm-dialog h3{
+  margin: 0 0 .2rem 0;
+  font-size: clamp(1.4rem, 1vw + 1.1rem, 1.8rem);
+  font-weight: 800;
+  color: #24262f;
+}
+.cm-sub{ color: #5e5e5e; margin: 0 0 .8rem 0; }
+
+.cm-form{
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.cm-row{
+  display: flex;
+  gap: .8rem;
+  flex-wrap: wrap;
+}
+
+.cm-row input{
+  flex: 1 1 260px;
+}
+
+.cm-form input, .cm-form textarea{
+  padding: .9rem 1rem;
+  border: 1.5px solid #e3defa;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  background: #fff;
+}
+
+.cm-form input:focus, .cm-form textarea:focus{
+  border-color: #6E06F2;
+  box-shadow: 0 8px 24px rgba(110,6,242,0.15);
+}
+
+.cm-error{
+  color: #b00020;
+  font-size: .95rem;
+}
+
+.cm-actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-top: .2rem;
+}
+
+.cm-primary{
+  background: linear-gradient(90deg, #6E06F2, #5404c7);
+  color: #fff;
+  border: none;
+  padding: .8rem 1.1rem;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cm-ghost{
+  text-decoration: none;
+  color: #6E06F2;
+  border: 1px solid rgba(110,6,242,0.25);
+  padding: .7rem 1rem;
+  border-radius: 12px;
+  font-weight: 700;
+  background: #fff;
+}

@@ -1,0 +1,26 @@
+:root {
+  --font-primary: "Poppins", sans-serif;       /* Main body / paragraph font */
+  --font-heading: "Josefin Sans", sans-serif;  /* Headings / titles font */
+}
+
+html, body {
+  font-family: var(--font-primary);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.button-group button svg {
+  color: #0a66c2; /* LinkedIn blue */
+  transition: color 0.3s ease;
+}
+
+.button-group button:hover svg {
+  color: #fff;
+}

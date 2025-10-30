@@ -1,0 +1,135 @@
+/* src/components/WhyWorkWithMe.css */
+
+.whywork-section {
+  width: 100%;
+  min-height: 80vh;
+  padding: 6rem 2rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f6f0ff 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 4rem;
+}
+
+.whywork-header h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #24262f;
+  margin-bottom: 0.5rem;
+}
+
+.whywork-header p {
+  font-size: 1.2rem;
+  color: #5e5e5e;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.whywork-cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.why-card {
+  background: #fff;
+  border: 2px solid #ebe9ff;
+  border-radius: 18px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.08);
+  width: 320px;
+  padding: 2rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 35px rgba(110, 6, 242, 0.25);
+  border-color: #6e06f2;
+}
+
+.why-icon {
+  font-size: 2.5rem;
+  color: #6e06f2;
+  margin-bottom: 1rem;
+}
+
+.why-card h3 {
+  font-size: 1.5rem;
+  color: #24262f;
+  margin-bottom: 0.6rem;
+}
+
+.why-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.why-footer p {
+  font-style: italic;
+  color: #6e06f2;
+  font-weight: 600;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-top: 2rem;
+}
+
+/* Journey Story Section */
+.why-journey {
+  max-width: 900px;
+  margin-top: 3rem;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ebe9ff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+  line-height: 1.8;
+}
+
+.why-journey h4 {
+  font-size: 1.6rem;
+  color: #6e06f2;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.why-journey p {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+
+/* Responsive */
+@media (max-width: 980px) {
+  .why-card {
+    width: 80%;
+  }
+
+  .whywork-header h2 {
+    font-size: 2.4rem;
+  }
+
+  .whywork-header p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .why-card {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .whywork-section {
+    padding: 4rem 1rem;
+  }
+}

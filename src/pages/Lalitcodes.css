@@ -1,0 +1,151 @@
+.Landing{
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    gap: 10vw;   
+}
+.Landing .leftSide{
+    width: 50%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items:flex-start; */
+    gap: 2rem;
+    padding: 0.1em;
+    margin-bottom: 5vh;
+    /* background-color: yellowgreen; */
+}
+.Landing .leftSide p{
+    font-size: 0.1em;
+    color:#24262F;
+}
+.Landing .leftSide h2{
+    font-size: 8rem;
+    color: #24262F;
+    line-height: 11vh;
+    /* line-height: 0.8em; */
+    font-weight: 900;
+    /* letter-spacing: 0vw; */
+}
+.Landing .leftSide h2 span{
+    color: #6E06F2;
+}
+.Landing .leftSide p{
+    font-size: 1.5em;
+}
+/* Leftside buttons */
+/* --- BUTTON GROUP --- */
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: left;
+  gap: 2rem;
+  /* background-color: yellow; */
+  /* margin-top: 1.5rem; */
+  /* border-radius: 50%; */
+
+}
+
+.button-group button {
+  padding: 0.8rem;
+  border: none;
+  background: #24262F;
+  color:#fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-group button:hover {
+  background: #6E06F2;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Leftside buttons */
+
+.Landing .rightSide{
+    width: 450px;
+    height: 450px;
+    border: 1px #24262F solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12vh;
+    
+    /* background-color: blueviolet;    */
+}
+.image-wrapper {
+  width: 100%;
+  max-width: 400px;
+  /* background-color: #6E06F2 ; */
+  aspect-ratio: 1/1; /* makes it square */
+  border-radius: 50%;
+  overflow: hidden;
+  /* box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2); */
+  transition: transform 0.4s ease;
+  border: 30px solid #24262F;
+  border-width: 1px;
+  
+  /* background-color: #6E06F2; */
+  
+}
+
+.image-wrapper img {
+  width: 100%;
+  /* height: 100%; */
+  object-fit: cover;
+  object-position: center top;
+  filter:grayscale();
+}
+.image-wrapper img:hover{
+      filter: none;
+      transition: 1s ease;
+
+}
+
+.image-wrapper:hover {
+  transform: scale(1.05);
+  border-radius: 100% ease;
+}
+
+/* ✨ Typewriter Effect */
+#animated {
+  font-size: 6rem;
+  position: relative;
+  display: inline-block;
+  line-height: 12vh;
+  min-height: 0.1em;
+}
+
+#typewriter {
+  color: #24262F;
+  font-weight: bold;
+}
+
+#typewriter .violet {
+  color: #6E06F2;
+}
+
+.cursor {
+  display: inline-block;
+  width: 1ch;
+  animation: blink 1s steps(1) infinite;
+  color: #6E06F2;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}

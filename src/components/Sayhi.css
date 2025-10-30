@@ -1,0 +1,37 @@
+    .conversation{
+    height: 100vh;
+    /* margin-top: 5rem; */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 15vh;
+    text-transform: capitalize;
+    gap: 10vh;
+    padding: 2rem;
+    justify-content: center;
+    /* background-color: aqua; */
+}
+.conversation .msg{
+    width: 30rem;
+    height: 2rem;
+    background-color: black;
+    border: none;
+    border-radius: 25px;
+    color: aliceblue;
+    font-family: 'poppins,' sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    align-self: center;
+    cursor: pointer;
+}
+.conversation .msg:hover{
+    background-color: blueviolet;
+    transform: scaleY(1.05);
+    transition: 0.1s ease-in; 
+    /* transition : 1s ease-in; */
+}
+
