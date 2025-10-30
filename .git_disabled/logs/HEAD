@@ -1,0 +1,31 @@
+0000000000000000000000000000000000000000 b3357a7e3e53b8063afe0ad365f2ee3259a48047 DevL <161231154+Rajputlalit@users.noreply.github.com> 1760916287 +0530	commit (initial): Add React portfolio landing page
+b3357a7e3e53b8063afe0ad365f2ee3259a48047 70f5ff445453da0989352cd7439ee85db480ec14 DevL <161231154+Rajputlalit@users.noreply.github.com> 1760917642 +0530	commit: Publish initial React portfolio landing page to remote repository.
+70f5ff445453da0989352cd7439ee85db480ec14 9cb3b3ff785a0398cdb9fcd60b455e3e5399a0cf DevL <161231154+Rajputlalit@users.noreply.github.com> 1760981346 +0530	commit: images slideshow added
+9cb3b3ff785a0398cdb9fcd60b455e3e5399a0cf c6b2fcb98ef89c010ad25a311073d2a5938c450c DevL <161231154+Rajputlalit@users.noreply.github.com> 1761057964 +0530	commit: Refactor layout and styles across multiple components; add new pages and implement slideshow functionality.
+c6b2fcb98ef89c010ad25a311073d2a5938c450c 94dabba79c36a4f88dfe22348b77c8305c904cab DevL <161231154+Rajputlalit@users.noreply.github.com> 1761058290 +0530	commit: Add CarouselSection component with styling and functionality
+94dabba79c36a4f88dfe22348b77c8305c904cab f448d6764422314fd3bf9b6f71d05647013a8af0 DevL <161231154+Rajputlalit@users.noreply.github.com> 1761586359 +0530	commit: I cannot generate a commit message based on "Not a git repository". Please provide a valid git diff.
+f448d6764422314fd3bf9b6f71d05647013a8af0 8c2e783be2d2016f1869827d81aaef9fe41bce52 DevL <161231154+Rajputlalit@users.noreply.github.com> 1761587218 +0530	commit: Initial commit: Portfolio website
+8c2e783be2d2016f1869827d81aaef9fe41bce52 6e5f1f57aa69537ccdaab20a7f7a6e1cab726830 DevL <161231154+Rajputlalit@users.noreply.github.com> 1761588075 +0530	commit: first commit
+6e5f1f57aa69537ccdaab20a7f7a6e1cab726830 0000000000000000000000000000000000000000 DevL <161231154+Rajputlalit@users.noreply.github.com> 1761588075 +0530	Branch: renamed refs/heads/main to refs/heads/main
+6e5f1f57aa69537ccdaab20a7f7a6e1cab726830 6e5f1f57aa69537ccdaab20a7f7a6e1cab726830 DevL <161231154+Rajputlalit@users.noreply.github.com> 1761588075 +0530	Branch: renamed refs/heads/main to refs/heads/main
+6e5f1f57aa69537ccdaab20a7f7a6e1cab726830 0000000000000000000000000000000000000000 DevL <161231154+Rajputlalit@users.noreply.github.com> 1761588109 +0530	Branch: renamed refs/heads/main to refs/heads/main
+6e5f1f57aa69537ccdaab20a7f7a6e1cab726830 6e5f1f57aa69537ccdaab20a7f7a6e1cab726830 DevL <161231154+Rajputlalit@users.noreply.github.com> 1761588109 +0530	Branch: renamed refs/heads/main to refs/heads/main
+6e5f1f57aa69537ccdaab20a7f7a6e1cab726830 0000000000000000000000000000000000000000 DevL <161231154+Rajputlalit@users.noreply.github.com> 1761589485 +0530	Branch: renamed refs/heads/main to refs/heads/main
+6e5f1f57aa69537ccdaab20a7f7a6e1cab726830 6e5f1f57aa69537ccdaab20a7f7a6e1cab726830 DevL <161231154+Rajputlalit@users.noreply.github.com> 1761589485 +0530	Branch: renamed refs/heads/main to refs/heads/main
+6e5f1f57aa69537ccdaab20a7f7a6e1cab726830 0000000000000000000000000000000000000000 DevL <161231154+Rajputlalit@users.noreply.github.com> 1761589531 +0530	Branch: renamed refs/heads/main to refs/heads/main
+6e5f1f57aa69537ccdaab20a7f7a6e1cab726830 6e5f1f57aa69537ccdaab20a7f7a6e1cab726830 DevL <161231154+Rajputlalit@users.noreply.github.com> 1761589531 +0530	Branch: renamed refs/heads/main to refs/heads/main
+6e5f1f57aa69537ccdaab20a7f7a6e1cab726830 df16e8380c325ee9fd0c235b356fcfcddc74c1f1 DevL <161231154+Rajputlalit@users.noreply.github.com> 1761592967 +0530	commit: first commit
+df16e8380c325ee9fd0c235b356fcfcddc74c1f1 0000000000000000000000000000000000000000 DevL <161231154+Rajputlalit@users.noreply.github.com> 1761592967 +0530	Branch: renamed refs/heads/main to refs/heads/main
+df16e8380c325ee9fd0c235b356fcfcddc74c1f1 df16e8380c325ee9fd0c235b356fcfcddc74c1f1 DevL <161231154+Rajputlalit@users.noreply.github.com> 1761592967 +0530	Branch: renamed refs/heads/main to refs/heads/main
+df16e8380c325ee9fd0c235b356fcfcddc74c1f1 0000000000000000000000000000000000000000 DevL <161231154+Rajputlalit@users.noreply.github.com> 1761592997 +0530	Branch: renamed refs/heads/main to refs/heads/main
+df16e8380c325ee9fd0c235b356fcfcddc74c1f1 df16e8380c325ee9fd0c235b356fcfcddc74c1f1 DevL <161231154+Rajputlalit@users.noreply.github.com> 1761592997 +0530	Branch: renamed refs/heads/main to refs/heads/main
+df16e8380c325ee9fd0c235b356fcfcddc74c1f1 d11b86288ec703bb2e1fd73ea2fddb1a717f3bcf DevL <161231154+Rajputlalit@users.noreply.github.com> 1761593009 +0530	commit: first commit
+d11b86288ec703bb2e1fd73ea2fddb1a717f3bcf 0000000000000000000000000000000000000000 DevL <161231154+Rajputlalit@users.noreply.github.com> 1761593009 +0530	Branch: renamed refs/heads/main to refs/heads/main
+d11b86288ec703bb2e1fd73ea2fddb1a717f3bcf d11b86288ec703bb2e1fd73ea2fddb1a717f3bcf DevL <161231154+Rajputlalit@users.noreply.github.com> 1761593009 +0530	Branch: renamed refs/heads/main to refs/heads/main
+d11b86288ec703bb2e1fd73ea2fddb1a717f3bcf 0000000000000000000000000000000000000000 DevL <161231154+Rajputlalit@users.noreply.github.com> 1761593245 +0530	Branch: renamed refs/heads/main to refs/heads/main
+d11b86288ec703bb2e1fd73ea2fddb1a717f3bcf d11b86288ec703bb2e1fd73ea2fddb1a717f3bcf DevL <161231154+Rajputlalit@users.noreply.github.com> 1761593245 +0530	Branch: renamed refs/heads/main to refs/heads/main
+d11b86288ec703bb2e1fd73ea2fddb1a717f3bcf a91f18f5817a57883580041508ec9dd090e6e87d DevL <161231154+Rajputlalit@users.noreply.github.com> 1761594992 +0530	commit: Pin Node version to 18 for Netlify build
+a91f18f5817a57883580041508ec9dd090e6e87d 22024ec3adf2840f94a954c95052530793b9d731 DevL <161231154+Rajputlalit@users.noreply.github.com> 1761803651 +0530	commit: added redirects to public for netlify
+22024ec3adf2840f94a954c95052530793b9d731 af5098e99e92ff1582e454545ec732ee28424b85 DevL <161231154+Rajputlalit@users.noreply.github.com> 1761807230 +0530	commit: final netlify deployment setup
+af5098e99e92ff1582e454545ec732ee28424b85 72012e41230666ccaea5adf5c73fabba38a9b2c3 DevL <161231154+Rajputlalit@users.noreply.github.com> 1761808438 +0530	commit: Fix: corrected Sayhi.css import path for Netlify build
+72012e41230666ccaea5adf5c73fabba38a9b2c3 e2ed27bc92ba7cc42b036de8db3482ea30d5f009 DevL <161231154+Rajputlalit@users.noreply.github.com> 1761840610 +0530	commit: CurrentCode For Home
