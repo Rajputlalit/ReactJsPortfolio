@@ -5,8 +5,8 @@ import CarouselSection from "../components/CarouselSection.jsx";
 import WhyWorkWithMe from "../components/WhyWorkWithMe";
 // import ContactForm from "../components/ContactForm";
 // import CTASection from "../components/CTASection";
-// import GalaxySection from "../components/GalaxySection";
-import GalaxyCTA from "../components/GalaxyCTA";
+import GalaxySection from "../components/GalaxySection";
+// import GalaxyCTA from "../components/GalaxyCTA";
 
 
 
@@ -30,7 +30,7 @@ function Home() {
 
     // Set typing or deleting speed (dots will appear slower naturally)
     const currentChar = current.charAt(text.length);
-let speed = isDeleting ? 50 : typingSpeed;
+let speed = isDeleting ? 90 : typingSpeed;
 
 // Slow down slightly when typing dots
 if (currentChar === ".") speed = 250;
@@ -70,9 +70,9 @@ if (currentChar === ".") speed = 250;
       {/* Your Carousel Section Below */}
       <CarouselSection />
       <WhyWorkWithMe />
-        <GalaxyCTA />
+        {/* <GalaxyCTA /> */}
 
-  {/* <GalaxySection/> */}
+  <GalaxySection/>
 
       
       </div>

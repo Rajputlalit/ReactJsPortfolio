@@ -3,3 +3,23 @@
     height: 100vh;
     background-color: violet;
 }
+.why-journey {
+  max-width: 900px;
+  height: 80vh;
+  /* margin-top: 3rem; */
+  text-align: left;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ebe9ff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+  line-height: 1.8;
+}
+
+.why-journey h4 {
+  font-size: 5.6rem;
+  color: #6e06f2;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: "poppins," sans-serif;
+}

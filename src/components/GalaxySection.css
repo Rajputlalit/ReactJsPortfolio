@@ -1,155 +1,170 @@
+/* src/components/GalaxySection.css */
+
 .galaxy-section {
   position: relative;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
-  color: #fff;
-  background: radial-gradient(ellipse at center, #0b0317 0%, #120028 100%);
+  background: radial-gradient(circle at center, #0f021f 0%, #06000f 100%);
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  border-radius: 25px;
+  /* padding: 25rem; */
 }
 
 .galaxy-canvas {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 0;
 }
 
 .galaxy-content {
   position: relative;
   z-index: 2;
-  text-align: center;
-  background: rgba(18, 6, 40, 0.6);
-  backdrop-filter: blur(20px);
-  border-radius: 18px;
-  padding: 3rem 2rem;
+  background: rgba(15, 10, 25, 0.6);
+  backdrop-filter: blur(12px);
+  padding: 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 25px rgba(150, 80, 255, 0.4);
   max-width: 700px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  margin: auto;
 }
 
 .galaxy-content h2 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 800;
-  color: #fefeff;
+  font-size: 2.9rem;
   margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(192, 132, 252, 0.8);
 }
 
 .galaxy-content p {
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  color: #d1cbe8;
-  margin-bottom: 2rem;
+  color: #e5e7eb;
+  font-size: 1.1rem;
   line-height: 1.6;
 }
 
 .galaxy-actions {
+  margin-top: 2rem;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
   gap: 1rem;
+  justify-content: center;
 }
 
 .cta-btn,
 .cta-outline {
-  border: none;
-  padding: 0.9rem 1.4rem;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 700;
+  padding: 0.9rem 1.6rem;
+  border-radius: 8px;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.25s ease;
+  font-size: 1rem;
+  transition: 0.3s ease;
 }
 
 .cta-btn {
-  background: linear-gradient(90deg, #6e06f2, #9a2ffb);
-  color: #fff;
-}
-.cta-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 20px rgba(155, 72, 255, 0.4);
+  background: linear-gradient(90deg, #7e22ce, #9333ea);
+  color: white;
+  border: none;
 }
 
 .cta-outline {
   background: transparent;
-  border: 1px solid #9a2ffb;
-  color: #c9b7ff;
-}
-.cta-outline:hover {
-  background: #9a2ffb33;
+  border: 2px solid #a855f7;
+  color: #a855f7;
 }
 
-/* popup form */
+.cta-btn:hover {
+  background: linear-gradient(90deg, #a855f7, #c084fc);
+  box-shadow: 0 0 20px #a855f7;
+}
+
+.cta-outline:hover {
+  background: #a855f7;
+  color: white;
+  box-shadow: 0 0 15px #a855f7;
+}
+
+/* Popup Contact Form */
 .popup-overlay {
   position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(8px);
-  display: grid;
-  place-items: center;
-  z-index: 50;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 0, 25, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
 }
 
 .popup {
-  background: #ffffff;
-  color: #222;
-  border-radius: 16px;
+  background: #1b112a;
   padding: 2rem;
+  border-radius: 1rem;
   width: 90%;
-  max-width: 420px;
+  max-width: 450px;
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.4);
   position: relative;
-  animation: popIn 0.3s ease;
-}
-
-@keyframes popIn {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
 }
 
 .popup h3 {
-  margin-top: 0;
-  color: #6e06f2;
-  font-size: 1.5rem;
-  text-align: center;
-}
-
-.popup form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
+  color: #c084fc;
+  margin-bottom: 1rem;
 }
 
 .popup input,
 .popup textarea {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 0.8rem;
-  font-size: 1rem;
   width: 100%;
-  resize: none;
+  background: #2a1f3c;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  padding: 0.8rem;
+  margin-bottom: 0.9rem;
+  outline: none;
+  font-family: "Poppins", sans-serif;
 }
 
 .send-btn {
-  background: #6e06f2;
-  color: white;
-  font-weight: 600;
-  padding: 0.9rem;
+  background: linear-gradient(90deg, #8b5cf6, #c084fc);
   border: none;
-  border-radius: 10px;
+  color: #fff;
+  padding: 0.9rem 1.5rem;
+  border-radius: 6px;
   cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.send-btn:hover {
+  box-shadow: 0 0 15px #a855f7;
 }
 
 .close-x {
   position: absolute;
   top: 10px;
-  right: 12px;
+  right: 15px;
   background: none;
+  color: #fff;
   border: none;
   font-size: 1.6rem;
   cursor: pointer;
-  color: #6e06f2;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

@@ -1,0 +1,45 @@
+.footer {
+  width: 100%;
+
+  background: #0f021f;
+  color: #e5e7eb;
+  text-align: center;
+  /* padding: 2rem 1rem; */
+  border-top: 1px solid rgba(168, 85, 247, 0.3);
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-content h3 {
+  font-size: 1.6rem;
+  color: #c084fc;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+
+.footer-links a {
+  color: #a855f7;
+  font-size: 1.4rem;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #c084fc;
+  transform: scale(1.15);
+}
+
+.footer-note {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.inline-heart {
+  color: #ef4444;
+  margin: 0 4px;
+  vertical-align: middle;
+}

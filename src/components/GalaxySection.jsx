@@ -6,10 +6,13 @@ import "./GalaxySection.css";
 export default function GalaxySection() {
   const mountRef = useRef(null);
   const [showForm, setShowForm] = useState(false);
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   let idleTimeout;
 
   useEffect(() => {
     const mount = mountRef.current;
+
+    // === SCENE SETUP ===
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       75,
@@ -20,52 +23,115 @@ export default function GalaxySection() {
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(mount.clientWidth, mount.clientHeight);
     mount.appendChild(renderer.domElement);
+    camera.position.z = 18;
 
-    // --- Create particles (floating tech dots) ---
-    const geometry = new THREE.BufferGeometry();
-    const particlesCount = 300;
-    const posArray = new Float32Array(particlesCount * 3);
-    for (let i = 0; i < particlesCount * 3; i++) {
-      posArray[i] = (Math.random() - 0.5) * 40;
+    // === FLOATING ICON SPRITES ===
+    function makeTextureFromChar(char, px = 128, color = "#c9b6ff", font = "bold 110px Poppins") {
+      const canvas = document.createElement("canvas");
+      const ctx = canvas.getContext("2d");
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = px * dpr;
+      canvas.height = px * dpr;
+      ctx.scale(dpr, dpr);
+
+      // Circle base for better visibility
+  // remove backing circle for clean transparent icons
+ctx.clearRect(0, 0, px, px);
+
+
+      ctx.fillStyle = color;
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.font = font;
+      ctx.fillText(char, px / 2, px / 2);
+
+      const texture = new THREE.CanvasTexture(canvas);
+      texture.minFilter = THREE.LinearFilter;
+      texture.needsUpdate = true;
+      texture.generateMipmaps = true;
+
+      return texture;
     }
-    geometry.setAttribute("position", new THREE.BufferAttribute(posArray, 3));
-    const material = new THREE.PointsMaterial({
-      size: 0.2,
-      color: "#6E06F2",
-    });
-    const particlesMesh = new THREE.Points(geometry, material);
-    scene.add(particlesMesh);
 
-    camera.position.z = 15;
+    const GLYPHS = [
+      "⚛️", "💻", "🎨", "🧠", "🚀", "📦", "🧩", "💡", "🌐", "🔧",
+      "📱", "🎯", "🪄", "🛰️", "🔗", "✨", "📊", "🔁", "💬", "🧭"
+    ];
+    const COLORS = ["#ffffff", "#d8b4ff", "#a78bfa", "#c084fc", "#93c5fd"];
+    const texturePool = [];
 
-    let mouseX = 0, mouseY = 0, targetX = 0, targetY = 0;
-    let clock = new THREE.Clock();
-    let isIdle = false;
+    // Create small textures to reduce icon size
+    for (let g = 0; g < GLYPHS.length; g++) {
+      for (let c = 0; c < COLORS.length; c++) {
+        const size = 100 + Math.random() * 50;
+        texturePool.push(makeTextureFromChar(GLYPHS[g], size, COLORS[c]));
+      }
+    }
+
+    // Generate icon sprites
+    const iconsCount = 800; // fewer = faster render, denser = more full background
+    const icons = [];
+    for (let i = 0; i < iconsCount; i++) {
+      const texture = texturePool[Math.floor(Math.random() * texturePool.length)];
+      const material = new THREE.SpriteMaterial({ map: texture, transparent: true, depthWrite: false });
+      const sprite = new THREE.Sprite(material);
+
+      sprite.position.set(
+        (Math.random() - 0.5) * 50,
+        (Math.random() - 0.5) * 30,
+        (Math.random() - 0.5) * 50
+      );
+      const s = 0.3 + Math.random() * 0.5; // Smaller icons
+      sprite.scale.set(s, s, 1);
+
+      sprite.userData = {
+        baseY: sprite.position.y,
+        floatSpeed: 0.9 + Math.random() * 1,
+        rotSpeed: 0.002 + Math.random() * 0.005,
+      };
+
+      scene.add(sprite);
+      icons.push(sprite);
+    }
+
+    // === ANIMATION & INTERACTION ===
+    let mouseX = 0, mouseY = 0;
+    const clock = new THREE.Clock();
 
     const animate = () => {
       requestAnimationFrame(animate);
-      const elapsedTime = clock.getElapsedTime();
-      particlesMesh.rotation.y = 0.1 * elapsedTime;
-      if (!isIdle) {
-        targetX += 0.001 * (mouseX - targetX);
-        targetY += 0.001 * (mouseY - targetY);
-        particlesMesh.rotation.y += 0.002 * (targetX);
-        particlesMesh.rotation.x += 0.002 * (targetY);
-      }
+      const t = clock.getElapsedTime();
+
+      // Floating effect for each icon
+      icons.forEach((sp, i) => {
+        sp.position.y = sp.userData.baseY + Math.sin(t * sp.userData.floatSpeed + i) * 0.3;
+        sp.material.rotation += sp.userData.rotSpeed;
+      });
+
+      // Subtle scene parallax
+      scene.rotation.y = mouseX * 1;
+      scene.rotation.x = mouseY * 1;
+
       renderer.render(scene, camera);
     };
     animate();
 
-    // --- Mouse interaction ---
+    // === Mouse interaction for cursor-parallax ===
     const handleMouseMove = (e) => {
-      mouseX = (e.clientX / window.innerWidth) * 2 - 1;
-      mouseY = (e.clientY / window.innerHeight) * 2 - 1;
-      isIdle = false;
+      mouseX = (e.clientX / window.innerWidth - 0.9);
+      mouseY = (e.clientY / window.innerHeight - 0.5);
+      document.documentElement.style.setProperty("--x", `${e.clientX}px`);
+      document.documentElement.style.setProperty("--y", `${e.clientY}px`);
       clearTimeout(idleTimeout);
-      idleTimeout = setTimeout(() => (isIdle = true), 4000);
+      idleTimeout = setTimeout(() => {
+        mouseX = 0;
+        mouseY = 0;
+      }, 4000);
     };
+
     window.addEventListener("mousemove", handleMouseMove);
 
+    // === Resize handling ===
     const handleResize = () => {
       camera.aspect = mount.clientWidth / mount.clientHeight;
       camera.updateProjectionMatrix();
@@ -80,20 +146,38 @@ export default function GalaxySection() {
     };
   }, []);
 
-  // ---- popup contact form ----
-  const handleFormClick = (e) => e.stopPropagation();
+  // === CONTACT FORM POPUP ===
+const handleFormClick = (e) => e.stopPropagation();
   const openForm = () => setShowForm(true);
   const closeForm = () => setShowForm(false);
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { name, email, message } = formData;
+    const encodedMessage = encodeURIComponent(
+      `Hello Lalit, I’m ${name} (${email}).\n\n${message}`
+    );
+    window.open(`https://wa.me/918569806978?text=${encodedMessage}`, "_blank");
+    setShowForm(false);
+    setFormData({ name: "", email: "", message: "" });
+    alert("✅ Thanks for reaching out! Redirecting you to WhatsApp...");
+  };
+
+
   return (
-    <section className="galaxy-section">
+      <section className="galaxy-section">
       <div className="galaxy-canvas" ref={mountRef}></div>
 
       <div className="galaxy-content">
-        <h2>Let’s Build Something Cosmic ✨</h2>
+        <h2>Let’s Create Something That Matters</h2>
         <p>
-          Exploring the universe of web development — from clean HTML & CSS
-          constellations to React.js galaxies and beyond.
+          Have an idea that can make a real-world impact? Let’s bring it to life with design, logic, and AI-powered development.
+          Together, we can turn innovation into reality.
         </p>
         <div className="galaxy-actions">
           <button className="cta-btn" onClick={openForm}>
@@ -117,15 +201,30 @@ export default function GalaxySection() {
         <div className="popup-overlay" onClick={closeForm}>
           <div className="popup" onClick={handleFormClick}>
             <h3>Send a Message</h3>
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                window.open("https://wa.me/91XXXXXXXXXX", "_blank");
-              }}
-            >
-              <input type="text" placeholder="Your Name" required />
-              <input type="email" placeholder="Your Email" required />
-              <textarea placeholder="Write your message..." required></textarea>
+            <form onSubmit={handleSubmit}>
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+              <textarea
+                name="message"
+                placeholder="Write your message..."
+                value={formData.message}
+                onChange={handleChange}
+                required
+              ></textarea>
               <button type="submit" className="send-btn">
                 Send via WhatsApp
               </button>

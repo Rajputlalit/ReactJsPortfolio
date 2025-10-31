@@ -2,39 +2,49 @@
 
 .whywork-section {
   width: 100%;
-  min-height: 80vh;
-  padding: 6rem 2rem;
+  min-height: 100vh;
+  padding: 2rem 2rem;
   background: linear-gradient(180deg, #ffffff 0%, #f6f0ff 100%);
+  /* background-color: aqua; */
   display: flex;
+  /* grid-template-columns: 1fr 1fr; */
+  /* flex-wrap:wrap-reverse; */
+  /* top: -2vh; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 4rem;
+  gap: 1rem;
+  /* margin-top: 10vh; */
 }
 
 .whywork-header h2 {
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: 800;
   color: #24262f;
   margin-bottom: 0.5rem;
+  /* text-align: left; */
+  /* align-self: flex-start; */
 }
 
 .whywork-header p {
   font-size: 1.2rem;
   color: #5e5e5e;
   max-width: 700px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .whywork-cards {
   display: flex;
+  /* background-color: aqua; */
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
   gap: 2rem;
   max-width: 1100px;
   width: 100%;
+  cursor: pointer;
+  /* padding: 2rem; */
 }
 
 .why-card {
@@ -45,6 +55,10 @@
   width: 320px;
   padding: 2rem 1.5rem;
   transition: all 0.3s ease;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
 .why-card:hover {
@@ -57,12 +71,14 @@
   font-size: 2.5rem;
   color: #6e06f2;
   margin-bottom: 1rem;
+  /* gap: 2em; */
 }
 
 .why-card h3 {
   font-size: 1.5rem;
   color: #24262f;
   margin-bottom: 0.6rem;
+  text-wrap: wrap;
 }
 
 .why-card p {
@@ -77,35 +93,19 @@
   font-weight: 600;
   font-size: 1.1rem;
   max-width: 600px;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
-
-/* Journey Story Section */
-.why-journey {
-  max-width: 900px;
-  margin-top: 3rem;
-  text-align: left;
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid #ebe9ff;
-  border-radius: 16px;
-  padding: 2rem;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
-  line-height: 1.8;
-}
-
-.why-journey h4 {
-  font-size: 1.6rem;
-  color: #6e06f2;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
 .why-journey p {
   color: #333;
   font-size: 1rem;
   margin-bottom: 1rem;
 }
-
+.why-icon-group{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
 
 
 /* Responsive */

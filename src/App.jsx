@@ -9,6 +9,7 @@ import GetinTouch from "./pages/GetinTouch.jsx";
 import './App.css'
 import Header from "./components/Header/Header.jsx";
 import Lalitcodes from "./pages/Lalitcodes.jsx";
+// import Footer from "./components/Footer/Footer.jsx";
 // import "./Styles/responsive-helpers.css";
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
       <Route path ="getintouch" element = {<GetinTouch/>} />
       {/* <Route path ="notfound" element ={<NotFound/>} /> */}
     </Routes>
+    {/* <Footer/> */}
     </div>
     </>
   )
