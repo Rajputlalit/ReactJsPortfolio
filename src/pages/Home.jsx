@@ -7,6 +7,7 @@ import WhyWorkWithMe from "../components/WhyWorkWithMe";
 // import CTASection from "../components/CTASection";
 import GalaxySection from "../components/GalaxySection";
 // import GalaxyCTA from "../components/GalaxyCTA";
+// import Footer from "../components/footer/Footer.jsx";
 
 
 
@@ -66,19 +67,25 @@ if (currentChar === ".") speed = 250;
         {text}
         <span className="cursor">|</span>
       </h1>
-
-      {/* Your Carousel Section Below */}
-      <CarouselSection />
-      <WhyWorkWithMe />
-        {/* <GalaxyCTA /> */}
-
-  <GalaxySection/>
-
-      
+            <CarouselSection />
       </div>
-</>
+      <WhyWorkWithMe />
+      <GalaxySection/>
+      {/* <div class="home-page">
+        <section className="home">
+<h1 className="typewriter">
+{text}
+<span className="cursor">|</span>
+</h1>
+      <CarouselSection/>
+      <WhyWorkWithMe/>
+      <GalaxySection/>
+      <div class="home-bottom-space">
 
-    
+      </div>
+        </section>
+      </div> */}
+</>    
   );
 }
 

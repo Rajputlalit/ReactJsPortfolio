@@ -1,3 +1,4 @@
+/* @import "./Responsive.css"; */
 :root {
   --font-primary: "Poppins", sans-serif;       /* Main body / paragraph font */
   --font-heading: "Josefin Sans", sans-serif;  /* Headings / titles font */
