@@ -27,7 +27,9 @@ function App() {
       <Route path ="getintouch" element = {<GetinTouch/>} />
       {/* <Route path ="notfound" element ={<NotFound/>} /> */}
     </Routes>
+    
     <Footer/>
+    
     </div>
     </>
     
