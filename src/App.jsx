@@ -1,39 +1,46 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
-import Skills from"./pages/Skills.jsx";
+import Skills from "./pages/Skills.jsx";
 import Experience from "./pages/Experience.jsx";
 import Projects from "./pages/Projects.jsx";
 import GetinTouch from "./pages/GetinTouch.jsx";
-// import NotFound from "./pages/NotFound.jsx";
-import './App.css'
+import "./App.css";
 import Header from "./components/Header/Header.jsx";
 import Lalitcodes from "./pages/Lalitcodes.jsx";
 import Footer from "./components/footer/Footer.jsx";
-// import "./Styles/responsive-helpers.css";
+import ScrollNavigator from "./components/ScrollNavigator.jsx";
+
+
 function App() {
+  const location = useLocation();
+
+  // ✅ Hide footer on landing & GetInTouch
+  const hideFooterPaths = ["/", "/getintouch"];
+  const shouldShowFooter = !hideFooterPaths.includes(location.pathname.toLowerCase());
 
   return (
     <>
-    <div className='container'>
-    <Header/>
-    <Routes>
-      <Route path ="/" element = {<Lalitcodes/>} />
-      <Route path ="home" element = {<Home/>} />
-      <Route path ="about" element = {<About/>} />
-      <Route path ="skills" element = {<Skills/>} />
-      <Route path ="experience" element = {<Experience/>} />
-      <Route path ="projetcs" element = {<Projects/>} />
-      <Route path ="getintouch" element = {<GetinTouch/>} />
-      {/* <Route path ="notfound" element ={<NotFound/>} /> */}
-    </Routes>
-    
-    <Footer/>
-    
-    </div>
+      <div className="container">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Lalitcodes />} />
+          <Route path="home" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="skills" element={<Skills />} />
+          <Route path="experience" element={<Experience />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="getintouch" element={<GetinTouch />} />
+        </Routes>
+
+        {/* ✅ Render footer only where needed */}
+        {shouldShowFooter && <Footer />}
+        {/* {shouldShowFooter && <Footer />} */}
+<ScrollNavigator />
+
+      </div>
     </>
-    
-  )
+  );
 }
 
-export default App
+export default App;

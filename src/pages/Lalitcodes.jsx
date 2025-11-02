@@ -24,7 +24,7 @@ function Lalitcodes() {
   // ✨ Typewriter core logic
   useEffect(() => {
     const current = phrases[loopIndex % phrases.length];
-    const speed = isDeleting ? 50 : 60; // faster when deleting
+    const speed = isDeleting ? 50 : 90; // faster when deleting
 
     const timeout = setTimeout(() => {
       const updatedText = isDeleting
