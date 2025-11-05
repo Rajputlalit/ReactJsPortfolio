@@ -333,7 +333,7 @@
 .carousel-inner {
   overflow: visible; /* prevent clipping of position:fixed overlay */
   /* padding: 2rem; */
-  width: 100%;
+  /* width: 100%; */
 }
 
 /* 🔧 Ensure the swiper wrapper centers slides and doesn't force unexpected widths */
