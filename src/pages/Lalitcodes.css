@@ -249,7 +249,7 @@
     align-items: center;
     text-align: center;
     /* gap: 3rem; */
-    margin-top: 15vh;
+    margin-top: 10vh;
   }
 
   .Landing .rightSide {
@@ -270,10 +270,12 @@
   .Landing .leftSide h2 {
     font-size: 1rem;
     line-height: 1.2em;
+    margin-left: 2vw;
   }
 
   .Landing .leftSide p {
     font-size: 1.1rem;
+    margin-left: 3vw;
   }
 
   .nav-links {
