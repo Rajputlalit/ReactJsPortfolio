@@ -233,9 +233,7 @@ const handleFormClick = (e) => e.stopPropagation();
               ×
             </button>
           </div>
-            <div className="why-footer">
-          <p>“I build with curiosity, learn with consistency, and code with purpose.”</p>
-        </div>
+        
         </div>
         
       )}

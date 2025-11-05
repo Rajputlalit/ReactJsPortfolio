@@ -1,30 +1,29 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
+import { useNavigate, useLocation } from "react-router-dom";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import "./Lalitcodes.css";
 import myphoto from "../assets/png/png/Lalit.png";
+import { FaEnvelope } from "react-icons/fa";
 
 function Lalitcodes() {
   const [activeButton, setActiveButton] = useState(null);
-  const [text, setText] = useState(""); // 🔤 Current text being typed
+  const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const [loopIndex, setLoopIndex] = useState(0); // 🔁 Which text we're on
+  const [loopIndex, setLoopIndex] = useState(0);
   const navigate = useNavigate();
+  const location = useLocation();
 
-  // ✨ All phrases (supports HTML tags!)
   const phrases = [
     "<span>Front</span>end<br>Developer",
     "Web<span class='violet'><br>Designer</span>",
-    "<span class='violet'style='color:#6E06F2'>Reactjs</span> Developer",
+    "<span class='violet' style='color:#6E06F2'>Reactjs</span> Developer",
     "Let's<br><span class='violet'>explore</span>",
     "Lalit<span class='violet'>codes.</span>",
   ];
 
-  // ✨ Typewriter core logic
   useEffect(() => {
     const current = phrases[loopIndex % phrases.length];
-    const speed = isDeleting ? 50 : 90; // faster when deleting
+    const speed = isDeleting ? 50 : 100;
 
     const timeout = setTimeout(() => {
       const updatedText = isDeleting
@@ -33,21 +32,17 @@ function Lalitcodes() {
 
       setText(updatedText);
 
-      // If done typing
       if (!isDeleting && updatedText === current) {
-        setTimeout(() => setIsDeleting(true), 1000); // pause before deleting
-      }
-      // If done deleting
-      else if (isDeleting && updatedText === "") {
+        setTimeout(() => setIsDeleting(true), 1000);
+      } else if (isDeleting && updatedText === "") {
         setIsDeleting(false);
-        setLoopIndex(loopIndex + 1); // move to next word
+        setLoopIndex(loopIndex + 1);
       }
     }, speed);
 
     return () => clearTimeout(timeout);
   }, [text, isDeleting, loopIndex]);
 
-  // ✅ Button click handlers
   const handleLinkedInClick = () => {
     setActiveButton("linkedin");
     window.open("https://www.linkedin.com/in/lalit-rajput-950220216", "_blank");
@@ -71,12 +66,8 @@ function Lalitcodes() {
           <span className="waving-hand">&#128075;</span>
         </p>
 
-        {/* ✨ Typewriter Effect Section */}
         <h2 id="animated">
-          <span
-            id="typewriter"
-            dangerouslySetInnerHTML={{ __html: text }}
-          ></span>
+          <span id="typewriter" dangerouslySetInnerHTML={{ __html: text }} />
           <span className="cursor">|</span>
         </h2>
 
@@ -85,23 +76,19 @@ function Lalitcodes() {
           websites your users will love.
         </p>
 
-        {/* ✅ BUTTONS SECTION */}
         <div className="button-group">
           <button
             className={activeButton === "linkedin" ? "active" : ""}
             onClick={handleLinkedInClick}
           >
-            <FaLinkedin
-              size={22}
-              style={{ marginRight: "8px", verticalAlign: "middle" }}
-            />
+            <FaLinkedin size={22} style={{ marginRight: "8px" }} />
             LinkedIn
           </button>
           <button
             className={activeButton === "github" ? "active" : ""}
             onClick={handleGithubClick}
           >
-          <FaGithub/> GitHub
+            <FaGithub style={{ marginRight: "8px" }} /> GitHub
           </button>
           <button
             className={activeButton === "projects" ? "active" : ""}
@@ -114,7 +101,8 @@ function Lalitcodes() {
 
       <div className="rightSide">
         <div className="image-wrapper">
-<img src={myphoto} alt="Lalit - ReactJS Developer" />        </div>
+          <img src={myphoto} alt="Lalit - ReactJS Developer" />
+        </div>
       </div>
     </section>
   );
