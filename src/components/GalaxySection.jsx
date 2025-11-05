@@ -237,7 +237,10 @@ const handleFormClick = (e) => e.stopPropagation();
         </div>
         
       )}
-      
+      <div className="quotebox">
+        <p>Got an idea? Let’s make it real.</p>
+      </div>
     </section>
+    
   );
 }

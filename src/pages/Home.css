@@ -65,3 +65,30 @@
     font-size: clamp(2.2rem, 9vw, 3.5rem);
   }
 }
+
+
+/* === FLUID RESPONSIVE TYPEWRITER === */
+@media (max-width: 1200px) {
+  .home h1 {
+    font-size: clamp(3rem, 8vw, 5rem);
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .home {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+  .typewriter {
+    font-size: clamp(2rem, 6vw, 3rem);
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  .home {
+    padding: 2rem 1rem;
+  }
+  .typewriter {
+    font-size: clamp(1.8rem, 8vw, 2.2rem);
+  }
+}

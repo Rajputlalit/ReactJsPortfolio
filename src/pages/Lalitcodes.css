@@ -286,7 +286,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .Landing .rightSide {
     width: 200px;
     height: 250px;

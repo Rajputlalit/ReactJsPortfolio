@@ -285,6 +285,7 @@ export default function CarouselSection() {
           speed={900}
           spaceBetween={24}
           slidesPerView={3}
+          
           autoplay={{
             delay: 2000,
             disableOnInteraction: false,
