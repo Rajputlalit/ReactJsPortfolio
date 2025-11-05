@@ -279,19 +279,35 @@ export default function CarouselSection() {
   return (
     <section className="carousel-wrap">
       <div className="carousel-inner">
-        <Swiper
-          modules={[Autoplay, A11y]}
-          loop
-          speed={900}
-          spaceBetween={24}
-          slidesPerView={3}
-          
-          autoplay={{
-            delay: 2000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }}
-        >
+<Swiper
+  modules={[Autoplay, A11y]}
+  loop={true}
+  speed={900}
+  spaceBetween={24}
+  /* 🔧 RESPONSIVE SWIPER BREAKPOINTS
+     - 1200+: 3 cards
+     - 980 - 1199: 3 (but smaller container)
+     - 760 - 979: 2 cards
+     - 0 - 759: 1 card
+     The 'slidesPerView' default is removed; breakpoints control counts.
+  */
+  breakpoints={{
+    1200: { slidesPerView: 3, spaceBetween: 24 },
+    980: { slidesPerView: 3, spaceBetween: 20 },
+    760: { slidesPerView: 2, spaceBetween: 16 },
+    0: { slidesPerView: 1, spaceBetween: 12 },
+  }}
+  autoplay={{
+    delay: 2200,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  }}
+  // ensure swiper recalculates if parent sizes change
+  observer={true}
+  observeParents={true}
+  observeSlideChildren={true}
+>
+
           {[...CARDS, ...CARDS, ...CARDS].map((c, i) => (
             <SwiperSlide key={i}>
               <CarouselCard {...c} images={images} index={i % CARDS.length} onOpen={handleOpen} />

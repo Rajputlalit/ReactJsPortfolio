@@ -187,16 +187,19 @@
 
 /* 💻 Tablets & small desktops */
 @media (max-width: 1200px) {
+
   .carousel-inner {
     width: 90vw;
     max-width: 1000px;
     padding: 1.8rem;
+    /* background-color: aquamarine; */
   }
   .img-frame { width: 190px; height: 190px; }
 }
 
 /* 📱 Medium tablets / large phones (2 cards per view) */
 @media (max-width: 980px) {
+  
   .carousel-inner {
     width: 94vw;
     padding: 1.5rem;
@@ -225,9 +228,11 @@
 
 /* 📲 Mobile (1 card per view) */
 @media (max-width: 680px) {
+
   .carousel-inner {
     width: 100%;
     padding: 1rem 0.8rem;
+    /* background-color: aqua; */
   }
   .swiper-slide {
     width: 100% !important;
@@ -259,9 +264,11 @@
 
 /* 📞 Extra small phones */
 @media (max-width: 420px) {
+
   .card {
     padding: 0.8rem;
     border-radius: 14px;
+    
   }
   .img-frame {
     width: 110px;
@@ -281,6 +288,11 @@
 
 /* === Expanded Overlay Responsive === */
 @media (max-width: 980px) {
+    .carousel-wrap{
+      position: relative;
+      top: 5vh;
+    /* margin-top: 5vh; */
+  }
   .expanded-content-columns {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -299,10 +311,118 @@
   }
 }
 @media (max-width: 480px) {
+  
   .expanded-copy {
     font-size: 0.9rem;
   }
   .expanded-tech .badge {
     font-size: 0.8rem;
+  }
+}
+
+
+
+/* add or replace */
+/* 🔧 Ensure parent doesn't clip the expanding overlay */
+.carousel-wrap,
+.carousel-inner {
+  overflow: visible; /* prevent clipping of position:fixed overlay */
+}
+
+/* 🔧 Ensure the swiper wrapper centers slides and doesn't force unexpected widths */
+.swiper-wrapper {
+  align-items: flex-start; /* keep slides top-aligned for consistent card layout */
+}
+
+/* 🔧 Make each slide behave as a centered flex container */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+/* 🔧 Card sizing: keep uniform card size per breakpoint
+   - We define a sensible min/max so cards are consistent and content aligns inside
+*/
+.card {
+  min-width: 260px;   /* minimum size for the whole card */
+  max-width: 340px;   /* max width for larger screens (cards won't wildly expand) */
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px 16px 14px;
+}
+
+/* adjust image frame to match card sizes with relative sizes */
+.img-frame { width: 210px; height: 210px; }
+
+/* Large / desktop adjustments */
+@media (min-width: 1200px) {
+  .card { min-width: 300px; max-width: 360px; }
+  .img-frame { width: 210px; height: 210px; }
+}
+
+/* medium screens: two cards visible (or 3 with smaller sizes) */
+@media (max-width: 979px) {
+  .card {
+    min-width: 260px;
+    max-width: 320px;
+    padding: 14px 12px;
+  }
+  .img-frame { width: 160px; height: 160px; }
+  .label { font-size: .95rem; }
+}
+
+/* Small mobile - 1 card view */
+@media (max-width: 759px) {
+  .carousel-inner { width: 100%; padding: 10px 10px; }
+  .card {
+    min-width: 280px; /* ensures card occupies viewport comfortably when slidesPerView:1 */
+    max-width: 360px;
+    padding: 12px;
+    border-radius: 16px;
+    margin: 0 auto;
+  }
+  .img-frame { width: 140px; height: 140px; }
+  .label { font-size: 0.9rem; padding: 6px 10px; }
+  .badge { font-size: 0.82rem; padding: 5px 8px; }
+  .global-quote { font-size: .95rem; padding: 0 8px; }
+}
+
+/* Extra small phones */
+@media (max-width: 420px) {
+  .card { min-width: 220px; max-width: 300px; padding: 10px; }
+  .img-frame { width: 110px; height: 110px; }
+  .label { font-size: 0.8rem; }
+  .badge { font-size: 0.72rem; padding: 4px 6px; }
+}
+
+/* 🔧 Expanded overlay: keep current behavior but ensure responsive layout */
+.expanded-overlay {
+  z-index: 9999; /* stronger to ensure it sits above everything */
+  position: fixed;
+  background-color: #c9c2d8;
+  /* rest of your transitions remain */
+}
+
+@media (max-width: 980px) {
+  .expanded-content-columns {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 1.5rem;
+  }
+  .expanded-panel-inner {
+    flex-direction: column;
+    height: 90vh;
+  }
+  .expanded-inner .right {
+    padding: 2rem 1rem;
+  }
+  .expanded-title {
+    font-size: clamp(2rem, 6vw, 3rem);
+    line-height: 1.2;
   }
 }

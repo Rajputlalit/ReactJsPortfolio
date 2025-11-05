@@ -48,47 +48,80 @@
   line-height: 1.1;
 }
 
-/* 📱 Responsive scaling for typewriter text and layout */
-@media (max-width: 1024px) {
-  .home h1 {
-    font-size: clamp(3rem, 8vw, 5rem);
-    text-align: center;
-  }
+/* 🔧 HOME: Typewriter responsive fixes
+   - Allow wrapping on small screens (white-space normal)
+   - Use clamp() for fluid sizes
+   - Keep desktop behaviour (no wrap) for large screens
+*/
+
+/* base typewriter adjustments (desktop) */
+.typewriter {
+  display: inline-block;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #24262f;
+  white-space: nowrap; /* keep single-line on larger screens */
+  overflow: hidden;
 }
 
-@media (max-width: 600px) {
-  .home {
-    height: auto;
-    padding: 3rem 1rem;
-  }
-  .home h1 {
-    font-size: clamp(2.2rem, 9vw, 3.5rem);
-  }
+/* cursor unchanged */
+.cursor {
+  display: inline-block;
+  color: blueviolet;
+  font-weight: bold;
+  animation: blink 0.8s steps(1) infinite;
 }
 
+/* 🔧 Fluid scaling for large -> medium screens */
+@media (max-width: 980px) {
+  .home h1, .typewriter{
+    line-height: 4rem;
+  }
 
-/* === FLUID RESPONSIVE TYPEWRITER === */
+}
+
 @media (max-width: 1200px) {
-  .home h1 {
-    font-size: clamp(3rem, 8vw, 5rem);
+  .home h1,
+  .typewriter {
+    font-size: clamp(3rem, 7.5vw, 5rem);
     text-align: center;
   }
 }
+
+/* 🔧 Medium screens: keep single-line but smaller */
 @media (max-width: 768px) {
   .home {
     height: auto;
     padding: 3rem 1rem;
   }
+  /* allow the typewriter to scale down, still prefer single-line */
   .typewriter {
-    font-size: clamp(2rem, 6vw, 3rem);
+    font-size: clamp(2.4rem, 6.6vw, 3.2rem);
     text-align: center;
+    white-space: nowrap;
   }
 }
+
+/* 🔧 Small screens: allow wrapping (so text doesn't overflow)
+   - We remove no-wrap so long phrases like "and Deploy..." can wrap naturally
+*/
 @media (max-width: 420px) {
   .home {
     padding: 2rem 1rem;
   }
   .typewriter {
-    font-size: clamp(1.8rem, 8vw, 2.2rem);
+    font-size: clamp(1.6rem, 8.2vw, 2.1rem);
+    white-space: normal; /* -> ALLOWS WRAPPING */
+    line-height: 1.05;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    text-align: center;
+    display: block; /* allows wrapping properly */
+  }
+  /* keep the cursor visually inline with text */
+  .typewriter .cursor {
+    display: inline-block;
+    /* margin-left: 1px; */
   }
 }
+
