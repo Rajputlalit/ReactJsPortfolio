@@ -17,6 +17,13 @@
     margin-bottom: 5vh;
     /* background-color: yellowgreen; */
 }
+.Landing .leftSide #animated{
+  height: 21vh;
+  /* background-color: aqua; */
+  /* text-align: center; */
+  /* width: max-content; */
+  /* height: 10vh; */
+}
 .Landing .leftSide p{
     font-size: 0.1em;
     color:#24262F;
@@ -244,6 +251,13 @@
 
 /* 🧱 RESPONSIVENESS */
 @media (max-width: 1024px) {
+  .Landing .leftSide #animated{
+  height: 10vh;
+  /* background-color: aqua; */
+  /* text-align: center; */
+  /* width: max-content; */
+  /* height: 10vh; */
+}
   .Landing {
     flex-direction: column-reverse;
     align-items: center;
