@@ -253,10 +253,6 @@
 @media (max-width: 1024px) {
   .Landing .leftSide #animated{
   height: 10vh;
-  /* background-color: aqua; */
-  /* text-align: center; */
-  /* width: max-content; */
-  /* height: 10vh; */
 }
   .Landing {
     flex-direction: column-reverse;
