@@ -4,7 +4,7 @@ import About from "./pages/About.jsx";
 import Skills from "./pages/Skills.jsx";
 import Experience from "./pages/Experience.jsx";
 import Projects from "./pages/Projects.jsx";
-import GetinTouch from "./pages/GetInTouch.jsx";
+import GetInTouch from "./pages/GetInTouch.jsx";
 import "./App.css";
 import Header from "./components/Header/Header.jsx";
 import Lalitcodes from "./pages/Lalitcodes.jsx";
@@ -32,7 +32,7 @@ function App() {
           <Route path="skills" element={<Skills />} />
           <Route path="projects" element={<Projects />} />
           <Route path="experience" element={<Experience />} />
-          <Route path="getintouch" element={<GetinTouch />} />
+          <Route path="getintouch" element={<GetInTouch />} />
         </Routes>
 
         {/* ✅ Render footer only where needed */}
