@@ -1,6 +1,6 @@
 // src/components/ui/card.jsx
 import React from "react";
-import "./card.css";
+// import "./card.css";
 
 /**
  * Simple Card wrapper used across the site.
