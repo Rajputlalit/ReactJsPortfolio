@@ -114,6 +114,7 @@
   line-height: 1.5;
   font-weight: 500;
   background-color: #ebe9ff59;
+  cursor: pointer;
   
 }
 
@@ -130,6 +131,7 @@
   font-size: 1rem;
   font-family: 'poppins', sans-serif;
   letter-spacing: .2px;
+  cursor: pointer;
 }
 
 /* tech badges row */
@@ -172,7 +174,45 @@
   letter-spacing: .2px;
   /* font-size: 1.5rem; */
 }
+.carousel-inner /* ✨ Glassmorphism transparent overlay */
+.expanded-overlay {
+  z-index: 9999;
+  position: fixed;
+  inset: 0;
+  /* ✅ Blur the content behind */
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  /* ✅ Transparent gradient */
+  background: rgba(255, 255, 255, 0.15);
+  /* ✅ Slight glow */
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
 
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.6s ease;
+  padding: 2rem 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+
+
+.expanded-panel-inner{
+  /* background-color: #6E06F2; */
+  /* background-color: #6E06F2; */
+}
+.carousel-inner .expanded-overlay .expanded-content-columns{
+  /* background-color: #6E06F2; */
+}
+
+.expanded-panel-inner .right .screens-list{
+  
+  /* background-color: aqua; */
+}
 
 
 
@@ -264,6 +304,19 @@
     padding: 0 1rem;
   }
 }
+@media (max-width: 680px) {
+  .close-btn {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    transform: none;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+  }
+}
+
 
 /* 📞 Extra small phones */
 @media (max-width: 420px) {

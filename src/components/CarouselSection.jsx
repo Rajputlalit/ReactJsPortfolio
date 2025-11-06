@@ -325,7 +325,14 @@ export default function CarouselSection() {
               ref={overlayRef}
               className={`expanded-overlay ${animating ? "animating" : ""}`}
               onTransitionEnd={onOverlayTransitionEnd}
-              style={overlayStyle}
+              style={{
+    left: overlayStyle?.left,
+    top: overlayStyle?.top,
+    width: overlayStyle?.width,
+    height: overlayStyle?.height,
+    borderRadius: overlayStyle?.borderRadius,
+    // ❌ DO NOT include background here — CSS will handle it
+  }}
             >
               <div className={`expanded-panel-inner ${showContent ? "show" : ""}`}>
                 <button className="close-btn" onClick={handleClose}>
