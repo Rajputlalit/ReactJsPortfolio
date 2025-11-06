@@ -305,8 +305,8 @@
   }
   .Landing .rightSide{
     position: relative;
-    left: 2vw;
-    top: 5vh;
+    left: -1vw;
+    top: 6vh;
   }
   .Landing .leftSide{
     display: flex;
@@ -333,6 +333,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-wrap: nowrap;
   /* padding: 0.8rem; */
   border: none;
   background: #24262F;
@@ -346,6 +347,7 @@
   #animated {
   font-size: 3rem;
   position: relative;
+  top: -2.9vh;
   display: inline-block;
   line-height: 7vh;
   min-height: 0.1em;

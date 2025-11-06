@@ -17,6 +17,7 @@
     padding-bottom: 0.25rem;
     border-bottom: 3px solid transparent;
     transition: border-color 200ms ease;
+    
 }
 
 .header h1 a.active{
@@ -27,6 +28,14 @@
     font-weight: bold;
     /* text-shadow: 2px 1px 4px; */
 }
+.header img{
+  width: 5rem;
+  object-fit:cover;
+  object-position: center;
+  overflow: hidden;
+}
+
+
 /* place near existing .header styles */
 .theme-toggle {
   margin-left: 12px;
