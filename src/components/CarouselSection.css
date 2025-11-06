@@ -198,24 +198,6 @@
   align-items: flex-start;
 }
 
-
-
-
-.expanded-panel-inner{
-  /* background-color: #6E06F2; */
-  /* background-color: #6E06F2; */
-}
-.carousel-inner .expanded-overlay .expanded-content-columns{
-  /* background-color: #6E06F2; */
-}
-
-.expanded-panel-inner .right .screens-list{
-  
-  /* background-color: aqua; */
-}
-
-
-
 /* Responsive */
 
 /* Ensure predictable sizing across elements to avoid layout jumps */
@@ -285,6 +267,7 @@
   .card {
     width: 100%;
     max-width: 360px;
+    min-height: 250px; /* ✅ ensures all cards have equal height */
     padding: 1rem;
     margin: 0 auto;
   }
