@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
+import Card, { CardContent } from "../components/ui/Card.jsx";
 import {
   GraduationCap,
   Award,

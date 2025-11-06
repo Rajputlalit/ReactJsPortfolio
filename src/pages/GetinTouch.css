@@ -164,7 +164,7 @@ textarea:focus {
   display: inline-block;
   background: linear-gradient(90deg, #6E06F2, #00AAFF);
   color: #fff;
-  padding: 0.6rem 1.4rem;
+  padding: 1rem 1.4rem;
   border-radius: 10px;
   text-decoration: none;
   transition: all 0.3s;
@@ -175,33 +175,88 @@ textarea:focus {
 }
 
 /* Availability */
-.availability {
-  margin-top: 3rem;
-  text-align: center;
-  background: linear-gradient(90deg, rgba(110,6,242,0.05), rgba(0,170,255,0.05));
-  border: 2px solid rgba(110,6,242,0.2);
-  border-radius: 18px;
-  padding: 2rem;
+/* 🌈 --- FIXED STYLING FOR GET IN TOUCH SECTION --- */
+
+/* 1️⃣ Fix the gradient header text (solid purple only) */
+.contact-header .grad-text {
+  background: none !important;
+  color: #6E06F2 !important;
 }
-.dot {
-  width: 12px;
-  height: 12px;
-  background: #00c851;
+
+/* 2️⃣ Define glass card style for uniform depth */
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* 3️⃣ Fix Contact Information gradient card */
+.grad-card {
+  background: linear-gradient(135deg, #4a03b9, #0077cc);
+  color: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.grad-card .info-item {
+  color: #fff;
+}
+
+.grad-card .info-item p {
+  color: #f0f0f0;
+}
+
+.grad-card .info-icon {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+}
+
+.grad-card h3 {
+  color: #fff;
+}
+
+/* 4️⃣ Space between cards on the right */
+.contact-info .glass,
+.contact-info .grad-card {
+  margin-bottom: 1.5rem;
+}
+
+/* 5️⃣ Quick Email styles */
+.quick-icon {
+  background: linear-gradient(135deg, #6E06F2, #00AAFF);
+  width: 70px;
+  height: 70px;
+  display: grid;
+  place-items: center;
   border-radius: 50%;
-  display: inline-block;
-  margin-bottom: 8px;
-  animation: blink 1.3s infinite;
+  margin: 0 auto 1rem;
 }
-@keyframes blink {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 1; }
+
+.quick-icon .icon {
+  color: white;
+  width: 32px;
+  height: 32px;
 }
-.availability h3 {
-  font-weight: 800;
-  margin: 0.6rem 0;
+
+/* 6️⃣ Email button hover pop */
+.email-btn {
+  background: linear-gradient(90deg, #6E06F2, #00AAFF);
+  color: #fff;
+  transition: all 0.3s ease;
 }
-.availability p {
-  color: #555;
-  max-width: 650px;
-  margin: 0 auto;
+
+.email-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(110, 6, 242, 0.3);
+}
+
+/* 7️⃣ Availability box refinement */
+.availability {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(110, 6, 242, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
 }

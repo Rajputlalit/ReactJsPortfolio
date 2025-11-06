@@ -1,6 +1,6 @@
 .skills-section {
   min-height: 100vh;
-  padding-top: 8rem;
+  /* padding-top: 8rem; */
   background: #f9f9ff;
   color: #24262F;
 }
@@ -8,7 +8,7 @@
 .skills-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3rem 2rem;
+  /* padding: 3rem 2rem; */
 }
 
 .skills-header {

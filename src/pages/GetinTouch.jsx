@@ -10,9 +10,9 @@ import {
   Linkedin,
   Twitter,
 } from "lucide-react";
-import "./GetInTouch.css";
+import "./GetinTouch.css";
 
-function GetInTouch() {
+function GetinTouch() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -228,4 +228,4 @@ function GetInTouch() {
     </section>
   );
 }
-export default GetInTouch;
+export default GetinTouch;
