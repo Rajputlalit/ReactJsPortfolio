@@ -1,17 +1,15 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import "./Lalitcodes.css";
 import myphoto from "../assets/png/png/Lalit.png";
-import { FaEnvelope } from "react-icons/fa";
+import resumePDF from "../assets/pdf/Lalit_Rajput_Resume.pdf"; // ⚠️ Update path if needed
 
 function Lalitcodes() {
-  const [activeButton, setActiveButton] = useState(null);
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopIndex, setLoopIndex] = useState(0);
   const navigate = useNavigate();
-  const location = useLocation();
 
   const phrases = [
     "<span>Front</span>end<br>Developer",
@@ -43,19 +41,24 @@ function Lalitcodes() {
     return () => clearTimeout(timeout);
   }, [text, isDeleting, loopIndex]);
 
+  const handleProjectsClick = () => {
+    navigate("/projects");
+  };
+
+  const handleDownloadCV = () => {
+    window.open(resumePDF, "_blank");
+  };
+
   const handleLinkedInClick = () => {
-    setActiveButton("linkedin");
     window.open("https://www.linkedin.com/in/lalit-rajput-950220216", "_blank");
   };
 
   const handleGithubClick = () => {
-    setActiveButton("github");
     window.open("https://github.com/Rajputlalit", "_blank");
   };
 
-  const handleProjectsClick = () => {
-    setActiveButton("projects");
-    navigate("/projects");
+  const handleMailClick = () => {
+    window.open("mailto:lalitr826@gmail.com");
   };
 
   return (
@@ -76,26 +79,33 @@ function Lalitcodes() {
           websites your users will love.
         </p>
 
+        {/* 🔹 New Button Group */}
         <div className="button-group">
-          <button
-            className={activeButton === "linkedin" ? "active" : ""}
+          <button onClick={handleProjectsClick}>
+            🚀 View Projects
+          </button>
+          <button onClick={handleDownloadCV}>
+            📄 Download CV
+          </button>
+        </div>
+
+        {/* 🔹 Social Icons */}
+        <div className="social-icons">
+          <FaLinkedin
+            size={26}
+            className="social-icon linkedin"
             onClick={handleLinkedInClick}
-          >
-            <FaLinkedin size={22} style={{ marginRight: "8px" }} />
-            LinkedIn
-          </button>
-          <button
-            className={activeButton === "github" ? "active" : ""}
+          />
+          <FaGithub
+            size={26}
+            className="social-icon github"
             onClick={handleGithubClick}
-          >
-            <FaGithub style={{ marginRight: "8px" }} /> GitHub
-          </button>
-          <button
-            className={activeButton === "projects" ? "active" : ""}
-            onClick={handleProjectsClick}
-          >
-            🚀 Browse Projects
-          </button>
+          />
+          <FaEnvelope
+            size={26}
+            className="social-icon mail"
+            onClick={handleMailClick}
+          />
         </div>
       </div>
 

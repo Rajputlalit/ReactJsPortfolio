@@ -10,6 +10,8 @@ import Header from "./components/Header/Header.jsx";
 import Lalitcodes from "./pages/Lalitcodes.jsx";
 import Footer from "./components/footer/Footer.jsx";
 import ScrollNavigator from "./components/ScrollNavigator.jsx";
+// import About from "../components/About.jsx";
+
 
 
 function App() {
@@ -28,8 +30,8 @@ function App() {
           <Route path="home" element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="skills" element={<Skills />} />
-          <Route path="experience" element={<Experience />} />
           <Route path="projects" element={<Projects />} />
+          <Route path="experience" element={<Experience />} />
           <Route path="getintouch" element={<GetinTouch />} />
         </Routes>
 

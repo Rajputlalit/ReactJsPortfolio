@@ -30,16 +30,17 @@ function Navbar() {
             Skills
           </NavLink>
         </li>
+          <li>
+          <NavLink to="/projects" className={({ isActive }) => (isActive ? "active-link" : "")}>
+            Projects
+          </NavLink>
+        </li>
         <li>
           <NavLink to="/experience" className={({ isActive }) => (isActive ? "active-link" : "")}>
             Experience
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/projects" className={({ isActive }) => (isActive ? "active-link" : "")}>
-            Projects
-          </NavLink>
-        </li>
+      
       </ul>
 
       {/* Hamburger (visible only on mobile via CSS) */}

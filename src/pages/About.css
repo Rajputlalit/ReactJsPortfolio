@@ -1,4 +1,4 @@
-.about{
+/* .about{
     width: 100%;
     height: 100vh;
     background-color: violet;
@@ -6,7 +6,6 @@
 .why-journey {
   max-width: 900px;
   height: 80vh;
-  /* margin-top: 3rem; */
   text-align: left;
   background: rgba(255, 255, 255, 0.8);
   border: 1px solid #ebe9ff;
@@ -22,4 +21,202 @@
   font-weight: 700;
   margin-bottom: 1rem;
   font-family: "poppins," sans-serif;
+} */
+ .about-section {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: transparent;
+  color: #24262f;
+  padding-top: 6rem;
+}
+
+.about-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+/* Header */
+.about-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+.gradient-text {
+  background: linear-gradient(90deg, #6E06F2, #8b46ff);
+  background-clip: text;            /* ✅ Standard syntax */
+  -webkit-background-clip: text;    /* ✅ For WebKit browsers */
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.about-header p {
+  max-width: 650px;
+  margin: 0.8rem auto;
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Grid Layout */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.about-card,
+.glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  padding: 2rem;
+}
+
+.gradient-card {
+  background: linear-gradient(135deg, #6e06f2, #8b46ff);
+  color: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-header h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.violet {
+  color: #6e06f2;
+}
+
+/* Education & Experience */
+.edu-content,
+.exp-content {
+  line-height: 1.6;
+}
+
+.small {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.exp-content .desc {
+  margin-top: 0.6rem;
+  color: #555;
+}
+
+/* Values Section */
+.values-section {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.value-card {
+  padding: 2rem 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  box-shadow: 0 10px 25px rgba(110, 6, 242, 0.2);
+}
+
+.icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6e06f2, #8b46ff);
+  border-radius: 14px;
+  padding: 1rem;
+  color: #fff;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.value-card h4 {
+  margin-bottom: 0.6rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.value-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Fun Facts */
+.funfacts-section {
+  background: linear-gradient(135deg, #6e06f2, #8b46ff);
+  color: #fff;
+  border-radius: 24px;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.funfacts-section h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+.funfacts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.funfacts-grid p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+}
+
+.emoji {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .about-header h1 {
+    font-size: 2.2rem;
+  }
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+  .funfacts-grid {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,5 +1,280 @@
-.exp{
-    width: 100%;
-    height: 100vh;
-    background-color: springgreen;
+/* Experience section - main container */
+.exp-section {
+  width: 100%;
+  padding: 4rem 1rem;
+  font-family: "Poppins", sans-serif;
+  background: transparent;
+  color: #24262F;
+}
+
+.exp-inner {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+/* Header */
+.exp-header h1 {
+  font-size: clamp(1.9rem, 3.8vw, 2.8rem);
+  font-weight: 800;
+  margin: 0 0 0.25rem 0;
+}
+.exp-sub {
+  color: #5e5e5e;
+  max-width: 900px;
+  margin: 0.25rem 0 1.5rem 0;
+}
+
+/* gradient text using new main theme */
+.grad-text {
+  background: linear-gradient(90deg, #6E06F2 0%, #00AAFF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 900;
+}
+
+/* --- Experience list --- */
+.exp-block {
+  margin-top: 1.4rem;
+}
+.exp-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  color: #24262F;
+}
+.exp-list {
+  display: grid;
+  gap: 1rem;
+}
+
+/* glass card base */
+.glass {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(12,18,60,0.06);
+}
+
+/* Experience card layout */
+.exp-card-inner {
+  padding: 1.15rem 1.15rem;
+}
+.exp-row {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+.exp-badge-col {
+  flex: 0 0 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+.icon-bubble {
+  display: inline-grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(110,6,242,0.12);
+}
+.icon-bubble .icon { width: 26px; height: 26px; }
+
+/* specific gradients (class hooks) */
+.grad-blue {
+  background: linear-gradient(135deg, #6E06F2 0%, #00AAFF 100%);
+}
+.grad-purple {
+  background: linear-gradient(135deg, #6E06F2 0%, #9b6eff 80%);
+}
+
+/* duration pill */
+.duration-pill {
+  background: linear-gradient(90deg, rgba(255,255,255,0.14), rgba(255,255,255,0.08));
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* content area */
+.exp-content {
+  flex: 1;
+}
+.exp-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.exp-role {
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin: 0 0 0.2rem 0;
+}
+.exp-org {
+  color: #5e5e5e;
+  margin: 0;
+}
+.exp-type {
+  display: inline-block;
+  padding: 6px 10px;
+  background: rgba(110,6,242,0.08);
+  color: #6E06F2;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+/* description + achievements */
+.exp-desc {
+  color: #4d4d4d;
+  margin: 0.6rem 0;
+}
+.exp-achievements h4 {
+  margin: 0.6rem 0 0.4rem 0;
+  font-size: 1rem;
+}
+.exp-achievements ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.exp-li {
+  display: flex;
+  gap: 0.6rem;
+  color: #4b4b4b;
+  align-items: flex-start;
+}
+.tick {
+  color: #6E06F2;
+  font-weight: 700;
+  margin-top: 0.08rem;
+}
+
+/* Certifications */
+.certs {
+  margin-top: 2rem;
+}
+.cert-list {
+  display: grid;
+  gap: 0.9rem;
+}
+.cert-card.grad-card {
+  background: linear-gradient(135deg, rgba(110,6,242,0.95), rgba(0,170,255,0.9));
+  color: #fff;
+  border: 0;
+  box-shadow: 0 12px 40px rgba(110,6,242,0.14);
+}
+.cert-row {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.cert-icon .icon { width: 32px; height: 32px; color: #fff; }
+.cert-body h3 { margin: 0; font-weight: 800; font-size: 1.05rem; }
+.muted { color: rgba(255,255,255,0.9); margin: 0.25rem 0; }
+.small { font-size: 0.85rem; }
+.desc { margin-top: 0.5rem; opacity: 0.95; }
+
+/* Bento Grid */
+.skills-bento { margin-top: 2rem; }
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.bento-card.small { padding: 0; }
+.bento-row {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+}
+.bento-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+}
+.grad-small {
+  background: linear-gradient(135deg, #6E06F2 0%, #00AAFF 100%);
+}
+.bento-title { margin: 0; font-weight: 800; }
+.muted.small { color: #555; }
+
+/* Impact / counters */
+.impact {
+  margin-top: 2.2rem;
+}
+.impact-inner {
+  border-radius: 16px;
+  padding: 1.6rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.grad-strong {
+  background: linear-gradient(135deg, rgba(110,6,242,0.95), rgba(0,170,255,0.9));
+  color: #fff;
+  box-shadow: 0 18px 40px rgba(110,6,242,0.12);
+}
+.impact-head { text-align: center; margin-bottom: 1rem; }
+.impact-head h2 { margin: 0 0 0.3rem 0; font-weight: 900; }
+.impact-head .muted { opacity: 0.95; }
+
+/* counters grid */
+.counters {
+  display: flex;
+  gap: 1.2rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.counter {
+  min-width: 160px;
+  text-align: center;
+  padding: 1rem 1.2rem;
+}
+.count {
+  font-size: 2.1rem;
+  font-weight: 900;
+  color: #fff;
+}
+.label {
+  color: rgba(255,255,255,0.9);
+  margin-top: 0.35rem;
+  font-weight: 600;
+}
+
+/* responsive tweaks */
+@media (min-width: 880px) {
+  .exp-list { grid-template-columns: 1fr; }
+  .exp-row { align-items: flex-start; }
+  .impact-inner { flex-direction: row; padding: 2rem; }
+  .counters { gap: 2.5rem; }
+}
+@media (max-width: 880px) {
+  .exp-badge-col { flex: 0 0 100px; }
+  .duration-pill { font-size: 0.8rem; padding: 5px 8px; }
+  .exp-role { font-size: 1.05rem; }
+}
+@media (max-width: 480px) {
+  .exp-inner { width: 96%; }
+  .exp-row { flex-direction: column; gap: 0.9rem; }
+  .exp-badge-col { flex-direction: row; align-items: center; gap: 0.8rem; }
+  .duration-pill { margin-left: 0.4rem; }
+  .counters { gap: 1rem; }
+  .counter { min-width: 120px; padding: 0.8rem; }
 }

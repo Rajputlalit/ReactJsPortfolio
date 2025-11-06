@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
 import CarouselSection from "../components/CarouselSection.jsx";
-// import Sayhi from "../components/Sayhi.jsx";
 import WhyWorkWithMe from "../components/WhyWorkWithMe";
-// import ContactForm from "../components/ContactForm";
-// import CTASection from "../components/CTASection";
 import GalaxySection from "../components/GalaxySection";
-// import GalaxyCTA from "../components/GalaxyCTA";
-// import Footer from "../components/footer/Footer.jsx";
+
 
 
 
@@ -71,20 +67,6 @@ if (currentChar === ".") speed = 250;
       </div>
       <WhyWorkWithMe />
       <GalaxySection/>
-      {/* <div class="home-page">
-        <section className="home">
-<h1 className="typewriter">
-{text}
-<span className="cursor">|</span>
-</h1>
-      <CarouselSection/>
-      <WhyWorkWithMe/>
-      <GalaxySection/>
-      <div class="home-bottom-space">
-
-      </div>
-        </section>
-      </div> */}
 </>    
   );
 }

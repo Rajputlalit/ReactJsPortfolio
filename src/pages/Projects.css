@@ -1,5 +1,213 @@
-.projects{
-    width: 100%;
-    height: 100vh;
-    background-color: orangered;
+.projects-section {
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.projects-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.projects-header h1 {
+  font-size: 2.8rem;
+  color: #24262f;
+}
+.gradient-text {
+  background: linear-gradient(90deg, #6e06f2, #00aaff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.projects-header p {
+  color: #555;
+  font-size: 1.1rem;
+  margin-top: 0.8rem;
+}
+
+/* Filter bar */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.filter-icon {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.filter-icon span {
+  font-size: 0.9rem;
+  color: #24262f;
+}
+.filter-btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.6);
+  color: #24262f;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.filter-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.8);
+}
+.filter-btn.active {
+  background: linear-gradient(90deg, #6e06f2, #00aaff);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(110, 6, 242, 0.3);
+  animation: shimmer 2.5s linear infinite;
+}
+
+/* Projects grid */
+.projects-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+.project-card {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(110, 6, 242, 0.2);
+}
+.project-img-wrap {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+.project-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.project-card:hover img {
+  transform: scale(1.1);
+}
+.img-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.project-card:hover .img-overlay {
+  opacity: 1;
+}
+.overlay-btn {
+  background: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+.overlay-btn:hover {
+  background: linear-gradient(90deg, #6e06f2, #00aaff);
+  color: #fff;
+}
+
+/* Project info */
+.project-info {
+  padding: 1.2rem 1.5rem 1.8rem;
+}
+.project-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+.project-top h3 {
+  font-size: 1.2rem;
+  color: #24262f;
+}
+.project-top .tag {
+  font-size: 0.75rem;
+  background: linear-gradient(90deg, #6e06f2, #00aaff);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.project-info p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.tags span {
+  background: rgba(240, 240, 255, 0.8);
+  color: #444;
+  font-size: 0.8rem;
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+
+/* CTA */
+.projects-cta {
+  margin-top: 4rem;
+  background: linear-gradient(90deg, #6e06f2, #00aaff);
+  padding: 3rem 2rem;
+  border-radius: 22px;
+  text-align: center;
+  color: #fff;
+  animation: shimmer 6s linear infinite;
+  background-size: 300% 300%;
+}
+.projects-cta h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.projects-cta p {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  font-size: 1rem;
+}
+.cta-btn {
+  display: inline-block;
+  background: #fff;
+  color: #6e06f2;
+  padding: 0.8rem 1.6rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.cta-btn:hover {
+  transform: translateY(-3px);
+  background: #f8f8ff;
+}
+
+/* Shimmer animation (shared with Skills.css) */
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-header h1 { font-size: 2.2rem; }
+  .project-img-wrap { height: 200px; }
 }
