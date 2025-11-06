@@ -18,7 +18,7 @@ function App() {
   const location = useLocation();
 
   // ✅ Hide footer on landing & GetInTouch
-  const hideFooterPaths = ["/", "/getintouch"];
+  const hideFooterPaths = ["/", "/GetInTouch"];
   const shouldShowFooter = !hideFooterPaths.includes(location.pathname.toLowerCase());
 
   return (
