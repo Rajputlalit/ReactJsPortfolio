@@ -4,7 +4,7 @@ import About from "./pages/About.jsx";
 import Skills from "./pages/Skills.jsx";
 import Experience from "./pages/Experience.jsx";
 import Projects from "./pages/Projects.jsx";
-import GetinTouch from "./pages/GetinTouch.jsx";
+import GetinTouch from "./pages/GetInTouch.jsx";
 import "./App.css";
 import Header from "./components/Header/Header.jsx";
 import Lalitcodes from "./pages/Lalitcodes.jsx";
