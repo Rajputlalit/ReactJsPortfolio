@@ -171,11 +171,22 @@ function CarouselCard({ title, tech, quote, images, index, onOpen }) {
 
   return (
     <article
-      className="card"
-      ref={cardRef}
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-    >
+  className="card"
+  ref={cardRef}
+  onMouseEnter={() => {
+    setPaused(true);
+    if (window.carouselSwiper?.autoplay) {
+      window.carouselSwiper.autoplay.stop(); // 🛑 pause swiper
+    }
+  }}
+  onMouseLeave={() => {
+    setPaused(false);
+    if (window.carouselSwiper?.autoplay) {
+      window.carouselSwiper.autoplay.start(); // ▶️ resume swiper
+    }
+  }}
+>
+
       <div className="img-frame">
         <img src={currentSrc} alt="" className="layer bottom" />
         <img src={nextSrc} alt="" className={`layer top ${crossfading ? "show" : ""}`} />
@@ -300,8 +311,9 @@ export default function CarouselSection() {
   autoplay={{
     delay: 2200,
     disableOnInteraction: false,
-    pauseOnMouseEnter: true,
   }}
+    onSwiper={(swiper) => (window.carouselSwiper = swiper)}
+
   // ensure swiper recalculates if parent sizes change
   observer={true}
   observeParents={true}
