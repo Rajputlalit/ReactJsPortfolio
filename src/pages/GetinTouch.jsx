@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Card, CardContent } from "../components/ui/card";
+import Card, { CardContent } from "../components/ui/Card.jsx";
 import {
   Mail,
   Phone,
@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import "./GetInTouch.css";
 
-export default function GetInTouch() {
+function GetInTouch() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -228,3 +228,4 @@ export default function GetInTouch() {
     </section>
   );
 }
+export default GetInTouch;

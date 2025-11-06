@@ -7,7 +7,7 @@ import "./card.css";
  * - Accepts className (merged) and children
  * - Spreads other props (e.g. onClick)
  */
-export function Card({ children, className = "", ...props }) {
+function Card({ children, className = "", ...props }) {
   return (
     <div className={`lc-card ${className}`} {...props}>
       {children}
@@ -18,12 +18,13 @@ export function Card({ children, className = "", ...props }) {
 /**
  * CardContent helper to apply standard padding/typography
  */
-export function CardContent({ children, className = "", ...props }) {
+function CardContent({ children, className = "", ...props }) {
   return (
     <div className={`lc-card-content ${className}`} {...props}>
       {children}
     </div>
   );
+  
 }
-
+export { CardContent };
 export default Card;
