@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+// import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { Linkedin, Github, Mail } from "lucide-react";
 import "./Lalitcodes.css";
 import myphoto from "../assets/png/png/Lalit.png";
 import resumePDF from "../assets/pdf/Lalit_Rajput_Resume.pdf"; // ⚠️ Update path if needed
@@ -91,22 +92,26 @@ function Lalitcodes() {
 
         {/* 🔹 Social Icons */}
         <div className="social-icons">
-          <FaLinkedin
-            size={26}
-            className="social-icon linkedin"
-            onClick={handleLinkedInClick}
-          />
-          <FaGithub
-            size={26}
-            className="social-icon github"
-            onClick={handleGithubClick}
-          />
-          <FaEnvelope
-            size={26}
-            className="social-icon mail"
-            onClick={handleMailClick}
-          />
-        </div>
+  <Linkedin
+    size={28}
+    strokeWidth={1.8}
+    className="social-icon linkedin"
+    onClick={handleLinkedInClick}
+  />
+  <Github
+    size={28}
+    strokeWidth={1.8}
+    className="social-icon github"
+    onClick={handleGithubClick}
+  />
+  <Mail
+    size={28}
+    strokeWidth={1.8}
+    className="social-icon mail"
+    onClick={handleMailClick}
+  />
+</div>
+
       </div>
 
       <div className="rightSide">

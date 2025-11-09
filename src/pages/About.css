@@ -32,36 +32,37 @@
 
 .about-container {
   width: 100%;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: auto;
-  padding: 2rem 0;
+  padding: 2rem ;
 }
 
 /* Header */
 .about-header {
-  text-align: center;
+  text-align: left;
   margin-bottom: 4rem;
 }
 
 .about-header h1 {
-  font-size: 3rem;
-  font-weight: 800;
+  font-size: 8rem;
+  font-weight: 900;
 }
 .gradient-text {
-  background: linear-gradient(90deg, #6E06F2, #8b46ff);
-  background-clip: text;            /* ✅ Standard syntax */
-  -webkit-background-clip: text;    /* ✅ For WebKit browsers */
+  /* background: linear-gradient(90deg, #6E06F2, #8b46ff);
+  background-clip: text;            
+  -webkit-background-clip: text;    
   color: transparent;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
 
 
 .about-header p {
   max-width: 650px;
-  margin: 0.8rem auto;
+  margin-top: 2rem;
   color: #555;
   font-size: 1.1rem;
   line-height: 1.6;
+  
 }
 
 /* Grid Layout */
@@ -74,8 +75,8 @@
 
 .about-card,
 .glass-card {
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.062);
+  backdrop-filter: blur(2px);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 20px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
@@ -87,7 +88,7 @@
   color: #fff;
   border-radius: 20px;
   padding: 2rem;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.479);
 }
 
 .card-header {
@@ -99,7 +100,7 @@
 
 .card-header h3 {
   font-size: 1.3rem;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .violet {
@@ -114,7 +115,7 @@
 
 .small {
   font-size: 0.9rem;
-  color: #666;
+  color: #181414b0;
 }
 
 .exp-content .desc {
@@ -138,6 +139,7 @@
 .value-card {
   padding: 2rem 1.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .value-card:hover {
@@ -170,17 +172,34 @@
 
 /* Fun Facts */
 .funfacts-section {
-  background: linear-gradient(135deg, #6e06f2, #8b46ff);
+  
+  background: linear-gradient(135deg, #0bbfec, #8b46ff, #5915be, #06cff2);
+  background-size: 300% 300%;
+  animation: gradientShift 8s ease infinite;
   color: #fff;
   border-radius: 24px;
   padding: 3rem 2rem;
   text-align: center;
+  transition: background 1s ease;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .funfacts-section h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 800;
-  margin-bottom: 2rem;
+  line-height: 4rem;
+  /* margin-bottom: 2rem; */
 }
 
 .funfacts-grid {
@@ -211,7 +230,10 @@
 
 @media (max-width: 600px) {
   .about-header h1 {
-    font-size: 2.2rem;
+    font-size: 6rem;
+    line-height: 5rem;
+    
+    /* text-shadow: 2rem 2rem 0.7rem rgba(31, 122, 197, 0.897); */
   }
   .values-grid {
     grid-template-columns: 1fr;

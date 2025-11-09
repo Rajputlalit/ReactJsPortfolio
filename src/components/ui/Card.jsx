@@ -26,5 +26,5 @@ function CardContent({ children, className = "", ...props }) {
   );
   
 }
-export { CardContent };
 export default Card;
+export { CardContent };

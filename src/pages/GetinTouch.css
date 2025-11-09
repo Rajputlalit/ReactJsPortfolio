@@ -1,30 +1,32 @@
 .contact-section {
   padding: 4rem 1rem;
   font-family: "Poppins", sans-serif;
+  padding: 2rem;
 }
 .contact-inner {
-  width: min(1200px, 90%);
+  width: min(1200px, 100%);
   margin: 0 auto;
 }
-.grad-text {
+/* .grad-text {
   background: linear-gradient(90deg, #6E06F2, #00AAFF);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   font-weight: 800;
-}
+} */
 .contact-header {
   text-align: center;
   margin-bottom: 3rem;
 }
 .contact-header h1 {
-  font-size: 2.5rem;
+  font-size: 5rem;
   font-weight: 800;
+  line-height: 4rem;
 }
 .contact-header p {
   color: #555;
   max-width: 600px;
-  margin: 0.5rem auto;
+  margin: 0.9rem auto;
 }
 
 /* Layout */
@@ -32,6 +34,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
+  padding: 2rem;
 }
 @media (max-width: 980px) {
   .contact-grid {
@@ -151,8 +154,11 @@ textarea:focus {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: grid; */
+  /* place-items: center; */
   margin: 0 auto 1rem;
 }
 .quick-icon svg {
@@ -164,10 +170,13 @@ textarea:focus {
   display: inline-block;
   background: linear-gradient(90deg, #6E06F2, #00AAFF);
   color: #fff;
-  padding: 1rem 1.4rem;
+  padding: 1rem 1rem;
   border-radius: 10px;
   text-decoration: none;
   transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .email-btn:hover {
   transform: scale(1.05);
@@ -186,7 +195,7 @@ textarea:focus {
 /* 2️⃣ Define glass card style for uniform depth */
 .glass {
   background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(1px);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);

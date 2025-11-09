@@ -1,7 +1,7 @@
 /* @import "./Responsive.css"; */
 :root {
   --font-primary: "Poppins", sans-serif;       /* Main body / paragraph font */
-  --font-heading: "Josefin Sans", sans-serif;  /* Headings / titles font */
+  --font-heading: "Poppins", sans-serif;  /* Headings / titles font */
 }
 
 html, body {
@@ -18,7 +18,7 @@ html, body {
   box-sizing: border-box;
 }
 .button-group button svg {
-  color: #0a66c2; /* LinkedIn blue */
+  color: #0a66c2;
   transition: color 0.3s ease;
 }
 
