@@ -4,8 +4,7 @@
   display: flex;
   align-items: center;
   width: auto;
-  left: 5vw;
-  /* background-color: red; */
+  margin-left: auto; /* push nav to the right side of header without fixed offsets */
 }
 
 /* Desktop nav (keeps your original design) */

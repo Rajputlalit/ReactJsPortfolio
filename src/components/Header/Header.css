@@ -1,16 +1,22 @@
 .header{
   width: 100%;
+  position: relative; /* allow centered absolute title */
   /* use min-height instead of hard height so padding doesn't break vertical alignment */
   min-height: 2.5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
 }
 .header h1{
   margin: 0; /* ensure h1 doesn't add extra spacing */
   display: flex;
   align-items: center; /* vertically center any inline children (logo + link) */
+  position: absolute; /* center title regardless of other elements */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  pointer-events: auto;
 }
 
 .header h1 a{
