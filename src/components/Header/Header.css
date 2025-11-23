@@ -71,6 +71,27 @@
   }
 }
 
+/* Extra small screens: ensure title doesn't overflow and is centered visually */
+@media (max-width: 420px) {
+  .mobile-logo{
+    width: 28px;
+    height: 28px;
+    margin-right: 6px;
+  }
+  .header h1 a{
+    font-size: 0.98rem;
+    /* limit title width so it can stay centered between left logo and right controls */
+    max-width: calc(100vw - 120px);
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .header{
+    padding: 0.5rem 0.6rem;
+  }
+}
+
 
 /* place near existing .header styles */
 .theme-toggle {

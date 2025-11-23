@@ -143,6 +143,8 @@
   }
   .hamburger-btn {
     display: block;
+    margin-left: 0; /* ensure hamburger sits at the right edge */
+    margin-right: 6px;
   }
 }
 
