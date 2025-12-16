@@ -3,12 +3,12 @@ import { NavLink } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import "./Header.css";
 import { FaEnvelope } from "react-icons/fa";
-import logo from "../../assets/png/png/Lalitcodeslogo.png";
+// import logo from "../../assets/png/png/Lalitcodeslogo.png";
 
 function Header() {
   return (
     <header className='header'>
-        <img src={logo} alt="Lalitcodeslogo" className="mobile-logo" />
+        {/* <img src={logo} alt="Lalitcodeslogo" className="mobile-logo" /> */}
 
       <h1><NavLink to="/" end>Lalitcodes.</NavLink></h1>
       <Navbar/>

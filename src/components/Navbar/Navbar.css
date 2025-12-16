@@ -65,6 +65,9 @@
   padding: 0.5rem;
   margin-left: auto;
   z-index: 1200;
+  position: relative;
+  left: 6px; /* nudge inward so it stays within viewport on mobile */
+  box-sizing: border-box;
 }
 .hamburger-btn .bar {
   display: block;
@@ -77,7 +80,7 @@
 
 /* transform to X when open */
 .hamburger-btn.open .bar:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+  transform: translateY(5px) rotate(45deg);
 }
 .hamburger-btn.open .bar:nth-child(2) {
   opacity: 0;

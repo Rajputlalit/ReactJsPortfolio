@@ -13,7 +13,7 @@
   display: flex;
   align-items: center; /* vertically center any inline children (logo + link) */
   position: absolute; /* center title regardless of other elements */
-  left: 50%;
+  /* left: 50%; */
   transform: translateX(-50%);
   z-index: 20;
   pointer-events: auto;
@@ -33,28 +33,28 @@
 
 .header h1 a.active{
     border-bottom-color: #6E06F2;
-}
+} 
 .header .material-symbols-outlined{
     font-size: 2.5rem;
     font-weight: bold;
     /* text-shadow: 2px 1px 4px; */
 }
-.header img{
+/* .header img{
   width: 5rem;
   object-fit: cover;
   object-position: center;
   overflow: hidden;
-}
+} */
 
 /* specific mobile logo class used in Header.jsx */
-.mobile-logo{
-  width: 48px; /* default desktop size */
+/* .mobile-logo{
+  width: 48px; 
   height: 48px;
   margin-right: 10px;
   display: inline-block;
   vertical-align: middle;
   border-radius: 6px;
-}
+} */
 
 /* small screens: reduce padding and logo size so logo lines up with the h1 */
 @media (max-width: 680px) {
